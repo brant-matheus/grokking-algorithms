@@ -16,5 +16,16 @@ def search_lowest(unsorted_list):
             lowest = value
             lowest_index = index
         
-    return lowest_index
+    return lowest_index #return the lowest index to pop() from list.
 
+def sort_list(unsorted_list):
+    sorted_list = [] #new list, sorted list.
+
+    for i in range(len(unsorted_list)):
+        lowest = search_lowest(unsorted_list) #search lowest index in unsorted_list.
+        sorted_list.append(unsorted_list.pop(lowest)) #output value of lowest index & remove from unsorted_list.
+
+
+    return sorted_list
+
+print(sort_list(unsorted_list))
